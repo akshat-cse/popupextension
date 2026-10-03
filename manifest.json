@@ -1,11 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Popup Window — Clean Tab Pop-out",
-  "version": "0.1.0",
-  "description": "Move the current tab into a minimal popup window, or open a link in one.",
+  "version": "0.2.0",
+  "description": "Open the current page in an always-on-top floating view, with regular popup-window controls as an alternative.",
   "minimum_chrome_version": "102",
   "permissions": [
+    "activeTab",
     "contextMenus",
+    "scripting",
     "storage"
   ],
   "background": {
@@ -13,7 +15,7 @@
     "type": "module"
   },
   "action": {
-    "default_title": "Pop out / restore this tab",
+    "default_title": "Open / close always-on-top view",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -30,7 +32,7 @@
       "suggested_key": {
         "default": "Alt+Shift+P"
       },
-      "description": "Pop out or restore the current tab"
+      "description": "Open or close the current page's floating PiP view"
     }
   }
 }
